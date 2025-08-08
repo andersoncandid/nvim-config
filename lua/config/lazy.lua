@@ -48,7 +48,7 @@ require("lazy").setup({
   { import = "plugins.kickstart.lint" },
   { import = "plugins.kickstart.autopairs" },
   { import = "plugins.kickstart.neo-tree" },
-  -- { import = "kickstart.gitsigns" }, -- adds gitsigns recommend keymaps
+  { import = "plugins.kickstart.gitsigns" }, -- adds gitsigns recommend keymaps
 
   -- [[ Other Plugins ]]
   { import = "plugins.coding.autotag" },
