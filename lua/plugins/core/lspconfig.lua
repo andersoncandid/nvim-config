@@ -132,7 +132,6 @@ return {
       vim.diagnostic.config({
         severity_sort = true,
         float = { border = "rounded", source = "if_many" },
-        jump = { float = true },
         underline = { severity = vim.diagnostic.severity.ERROR },
         signs = vim.g.have_nerd_font and {
           text = {
@@ -142,20 +141,20 @@ return {
             [vim.diagnostic.severity.HINT] = "󰌶 ",
           },
         } or {},
-        -- Uncomment for inline diagnostic
-        -- virtual_text = {
-        --   source = "if_many",
-        --   spacing = 2,
-        --   format = function(diagnostic)
-        --     local diagnostic_message = {
-        --       [vim.diagnostic.severity.ERROR] = diagnostic.message,
-        --       [vim.diagnostic.severity.WARN] = diagnostic.message,
-        --       [vim.diagnostic.severity.INFO] = diagnostic.message,
-        --       [vim.diagnostic.severity.HINT] = diagnostic.message,
-        --     }
-        --     return diagnostic_message[diagnostic.severity]
-        --   end,
-        -- },
+        virtual_text = {
+          source = "if_many",
+          spacing = 2,
+          current_line = true,
+          format = function(diagnostic)
+            local diagnostic_message = {
+              [vim.diagnostic.severity.ERROR] = diagnostic.message,
+              [vim.diagnostic.severity.WARN] = diagnostic.message,
+              [vim.diagnostic.severity.INFO] = diagnostic.message,
+              [vim.diagnostic.severity.HINT] = diagnostic.message,
+            }
+            return diagnostic_message[diagnostic.severity]
+          end,
+        },
       })
 
       -- LSP servers and clients are able to communicate to each other what features they support.
@@ -226,8 +225,8 @@ return {
         "vale", -- markdown
         "jsonlint", -- json
         "yamllint", -- yaml
-        -- 'shellcheck', -- sh
-        -- 'hadolint', -- dockerfile
+        "shellcheck", -- sh
+        "hadolint", -- dockerfile
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

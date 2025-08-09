@@ -7,10 +7,10 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Disable or enable diagnostic for current buffer
--- vim.keymap.set("n", "<leader>td", function()
---   local bf = vim.api.nvim_get_current_buf()
---   vim.diagnostic.enable(not vim.diagnostic.is_enabled({ bufnr = bf }), { bufnr = bf })
--- end, { desc = "[T]oggle [D]iagnostics" })
+vim.keymap.set("n", "<leader>td", function()
+  local bf = vim.api.nvim_get_current_buf()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled({ bufnr = bf }), { bufnr = bf })
+end, { desc = "[T]oggle [D]iagnostics" })
 
 -- Exit terminal mode
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })

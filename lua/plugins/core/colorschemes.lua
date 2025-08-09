@@ -9,6 +9,7 @@ return {
   --     dim_inactive = true,
   --     styles = {
   --       keywords = { italic = false },
+  --       comments = { italic = false },
   --     },
   --   })
   --
