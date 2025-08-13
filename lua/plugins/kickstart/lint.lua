@@ -1,36 +1,36 @@
 return {
 
   { -- Linting
-    "mfussenegger/nvim-lint",
-    event = { "BufReadPre", "BufNewFile" },
+    'mfussenegger/nvim-lint',
+    event = { 'BufReadPre', 'BufNewFile' },
     config = function()
-      local lint = require("lint")
+      local lint = require('lint')
       lint.linters_by_ft = {
         -- Core FULLSTACK
-        javascript = { "eslint_d" },
-        typescript = { "eslint_d" },
-        javascriptreact = { "eslint_d" },
-        typescriptreact = { "eslint_d" },
+        javascript = { 'eslint_d' },
+        typescript = { 'eslint_d' },
+        javascriptreact = { 'eslint_d' },
+        typescriptreact = { 'eslint_d' },
 
         -- Web (HTML/CSS)
-        html = { "htmlhint" },
-        css = { "stylelint" },
-        scss = { "stylelint" },
+        html = { 'htmlhint' },
+        css = { 'stylelint' },
+        scss = { 'stylelint' },
 
         -- Data Base
-        sql = { "sqlfluff" },
+        -- sql = { "sqlfluff" },
 
         -- Markdown & Configs
-        markdown = { "markdownlint", "vale" },
-        json = { "jsonlint" },
-        yaml = { "yamllint" },
+        markdown = { 'markdownlint', 'vale' },
+        json = { 'jsonlint' },
+        yaml = { 'yamllint' },
 
         -- Infra & Scripts
-        sh = { "shellcheck" },
-        dockerfile = { "hadolint" },
+        sh = { 'shellcheck' },
+        dockerfile = { 'hadolint' },
 
         -- Python
-        python = { "ruff" },
+        python = { 'ruff' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -67,8 +67,8 @@ return {
 
       -- Create autocommand which carries out the actual linting
       -- on the specified events.
-      local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+      local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
+      vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
         group = lint_augroup,
         callback = function()
           -- Only run the linter in buffers that you can modify in order to

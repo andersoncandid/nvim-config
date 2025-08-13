@@ -7,14 +7,14 @@ vim.opt.softtabstop = 2 -- width when pressing <Tab> or <BS>
 vim.o.number = true
 
 -- Enable mouse mode
-vim.o.mouse = "a"
+vim.o.mouse = 'a'
 
 -- Don't show the mode
 vim.o.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
+  vim.o.clipboard = 'unnamedplus'
 end)
 
 -- Enable break indent
@@ -28,7 +28,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.o.signcolumn = "yes"
+vim.o.signcolumn = 'yes'
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -42,14 +42,14 @@ vim.o.splitbelow = true
 
 -- Configure how neovim set chars
 vim.o.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
-vim.o.inccommand = "split"
+vim.o.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
-vim.o.cursorlineopt = "number"
+vim.o.cursorlineopt = 'number'
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
