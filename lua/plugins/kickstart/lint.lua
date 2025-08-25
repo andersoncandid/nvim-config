@@ -18,7 +18,6 @@ return {
         scss = { 'stylelint' },
 
         -- Data Base
-        -- sql = { "sqlfluff" },
 
         -- Markdown & Configs
         markdown = { 'markdownlint', 'vale' },

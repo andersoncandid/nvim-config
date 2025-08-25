@@ -6,6 +6,13 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- Disable diagnostic by default
+-- vim.api.nvim_create_autocmd('LspAttach', {
+--   callback = function(args)
+--     vim.diagnostic.enable(false, { bufnr = args.buf })
+--   end,
+-- })
+
 -- [[ Load Configs ]]
 
 require('config.options')

@@ -21,11 +21,11 @@ return {
 
   ---------------------------------------------------------
 
-  -- "catppuccin/nvim",
-  -- name = "catppuccin",
+  -- 'catppuccin/nvim',
+  -- name = 'catppuccin',
   -- priority = 1000,
   -- config = function()
-  --   require("catppuccin").setup({
+  --   require('catppuccin').setup({
   --     -- transparent_background = true,
   --     float = {
   --       transparent = false, -- enable transparent floating windows
@@ -33,18 +33,18 @@ return {
   --     },
   --     dim_inactive = {
   --       enabled = true, -- dims the background color of inactive window
-  --       shade = "dark",
+  --       shade = 'dark',
   --       percentage = 0.15, -- percentage of the shade to apply to the inactive window
   --     },
   --     styles = {
-  --       comments = {},
   --       conditionals = {},
+  --       comments = {},
   --     },
   --     integrations = {
   --       which_key = true,
   --     },
   --   })
-  --   vim.cmd.colorscheme("catppuccin-mocha")
+  --   vim.cmd.colorscheme('catppuccin-mocha')
   -- end,
 
   ---------------------------------------------------------
@@ -58,7 +58,6 @@ return {
   --   vim.g.everforest_float_style = "dim"
   --   vim.g.everforest_dim_inactive_windows = 1
   --   vim.g.everforest_background = "hard"
-  --   vim.g.everforest_disable_italic_comment = 1
   --   -- vim.g.everforest_transparent_background = 2
   --   vim.cmd.colorscheme("everforest")
   -- end,
@@ -73,14 +72,14 @@ return {
   --   vim.g.gruvbox_material_current_word = "grey background"
   --   vim.g.gruvbox_material_float_style = "dim"
   --   vim.g.gruvbox_material_dim_inactive_windows = 1
-  --   vim.g.gruvbox_material_disable_italic_comment = 1
+  --   -- vim.g.gruvbox_material_disable_italic_comment = 1
   --   -- vim.g.gruvbox_material_background = 'hard'
   --   -- vim.g.gruvbox_material_transparent_background = 2
   --   vim.cmd.colorscheme("gruvbox-material")
   -- end,
-
-  ---------------------------------------------------------
-
+  --
+  -- -------------------------------------------------------
+  --
   -- "EdenEast/nightfox.nvim",
   -- priority = 1000,
   -- config = function()

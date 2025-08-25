@@ -174,7 +174,6 @@ return {
         html = {}, -- HTML
         cssls = {}, -- CSS
         jsonls = {}, -- JSON
-        sqlls = {}, -- SQL
         bashls = {}, -- bash script
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -216,7 +215,6 @@ return {
         'ruff', -- python
         'htmlhint', -- html
         'stylelint', -- css, scss
-        'sqlfluff', -- sql
         'markdownlint', -- markdown
         'vale', -- markdown
         'jsonlint', -- json
