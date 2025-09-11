@@ -44,7 +44,7 @@ require('lazy').setup({
 
   -- [[ Kickstart plugins ]]
   -- { import = 'plugins.kickstart.debug' },
-  { import = 'plugins.kickstart.indent_line' },
+  -- { import = 'plugins.kickstart.indent_line' },
   -- { import = 'plugins.kickstart.lint' },
   { import = 'plugins.kickstart.autopairs' },
   { import = 'plugins.kickstart.neo-tree' },
