@@ -42,6 +42,7 @@ return {
   --     },
   --     integrations = {
   --       which_key = true,
+  --       barbar = true,
   --     },
   --   })
   --   vim.cmd.colorscheme('catppuccin-mocha')
