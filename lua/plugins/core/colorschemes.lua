@@ -46,7 +46,50 @@ return {
   --   })
   --   vim.cmd.colorscheme('catppuccin-mocha')
   -- end,
+
+  ----------------------------------------------------------
+
+  -- 'EdenEast/nightfox.nvim',
+  -- priority = 1000,
+  -- config = function()
+  --   require('nightfox').setup({
+  --     options = {
+  --       -- transparent = true,
+  --       dim_inactive = true,
+  --       styles = {
+  --         comments = '',
+  --       },
+  --     },
+  --   })
   --
+  --   vim.cmd('colorscheme carbonfox')
+  -- end,
+
+  ---------------------------------------------------------
+
+  -- 'rebelot/kanagawa.nvim',
+  -- priority = 1000,
+  -- config = function()
+  --   require('kanagawa').setup({
+  --     commentStyle = { italic = false },
+  --     keywordStyle = { italic = false },
+  --     statementStyle = { bold = false },
+  --     typeStyle = { bold = false },
+  --     transparent = false,
+  --     dimInactive = true,
+  --     colors = {
+  --       theme = {
+  --         all = {
+  --           ui = {
+  --             bg_gutter = 'none',
+  --           },
+  --         },
+  --       },
+  --     },
+  --   })
+  --   vim.cmd('colorscheme kanagawa')
+  -- end,
+
   ---------------------------------------------------------
 
   -- "sainnhe/everforest",
@@ -76,23 +119,5 @@ return {
   --   -- vim.g.gruvbox_material_background = 'hard'
   --   -- vim.g.gruvbox_material_transparent_background = 2
   --   vim.cmd.colorscheme("gruvbox-material")
-  -- end,
-  --
-  -- -------------------------------------------------------
-  --
-  -- "EdenEast/nightfox.nvim",
-  -- priority = 1000,
-  -- config = function()
-  --   require("nightfox").setup({
-  --     options = {
-  --       -- transparent = true,
-  --       dim_inactive = true,
-  --       styles = {
-  --         comments = "italic",
-  --       },
-  --     },
-  --   })
-  --
-  --   vim.cmd("colorscheme duskfox")
   -- end,
 }
