@@ -14,6 +14,15 @@ return {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    -- source_selector = {
+    --   winbar = true,
+    --   statusline = false,
+    -- },
+    -- sources = {
+    --   'filesystem',
+    --   'git_status',
+    --   'document_symbols',
+    -- },
     filesystem = {
       window = {
         width = 30,

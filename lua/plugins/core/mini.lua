@@ -26,7 +26,7 @@ return {
         return '%2l:%-2v'
       end
 
-      require('mini.tabline').setup() -- Buffers tab bar on top
+      -- require('mini.tabline').setup() -- Buffers tab bar on top
 
       -- [[ My addtions ]]
       -- require('mini.indentscope').setup()
