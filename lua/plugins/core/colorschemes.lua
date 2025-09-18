@@ -72,6 +72,7 @@ return {
   priority = 1000,
   config = function()
     require('kanagawa').setup({
+      undercurl = false,
       commentStyle = { italic = false },
       keywordStyle = { italic = false },
       statementStyle = { bold = false },

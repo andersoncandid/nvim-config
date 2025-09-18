@@ -173,6 +173,7 @@ return {
         pyright = {}, -- python
         html = {}, -- HTML
         cssls = {}, -- CSS
+        tailwindcss = {},
         jsonls = {}, -- JSON
         bashls = {}, -- bash script
         -- rust_analyzer = {},
