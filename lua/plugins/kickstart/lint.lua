@@ -20,7 +20,7 @@ return {
         -- Data Base
 
         -- Markdown & Configs
-        markdown = { 'markdownlint', 'vale' },
+        -- markdown = { 'markdownlint', 'vale' },
         json = { 'jsonlint' },
         yaml = { 'yamllint' },
 
