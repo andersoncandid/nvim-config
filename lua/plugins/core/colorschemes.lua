@@ -21,31 +21,31 @@ return {
 
   ---------------------------------------------------------
 
-  'catppuccin/nvim',
-  name = 'catppuccin',
-  priority = 1000,
-  config = function()
-    require('catppuccin').setup({
-      -- transparent_background = true,
-      float = {
-        transparent = false, -- enable transparent floating windows
-        solid = false, -- use solid styling for floating windows, see |winborder|
-      },
-      dim_inactive = {
-        enabled = true, -- dims the background color of inactive window
-        shade = 'dark',
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
-      },
-      styles = {
-        conditionals = {},
-        comments = {},
-      },
-      integrations = {
-        which_key = true,
-      },
-    })
-    vim.cmd.colorscheme('catppuccin-mocha')
-  end,
+  -- 'catppuccin/nvim',
+  -- name = 'catppuccin',
+  -- priority = 1000,
+  -- config = function()
+  --   require('catppuccin').setup({
+  --     transparent_background = false,
+  --     float = {
+  --       transparent = false, -- enable transparent floating windows
+  --       solid = false, -- use solid styling for floating windows, see |winborder|
+  --     },
+  --     -- dim_inactive = {
+  --     --   enabled = true, -- dims the background color of inactive window
+  --     --   shade = 'dark',
+  --     --   percentage = 0.15, -- percentage of the shade to apply to the inactive window
+  --     -- },
+  --     styles = {
+  --       conditionals = {},
+  --       comments = {},
+  --     },
+  --     integrations = {
+  --       which_key = true,
+  --     },
+  --   })
+  --   vim.cmd.colorscheme('catppuccin-mocha')
+  -- end,
 
   ----------------------------------------------------------
 
@@ -67,29 +67,29 @@ return {
 
   ---------------------------------------------------------
 
-  -- 'rebelot/kanagawa.nvim',
-  -- priority = 1000,
-  -- config = function()
-  --   require('kanagawa').setup({
-  --     undercurl = false,
-  --     commentStyle = { italic = false },
-  --     keywordStyle = { italic = false },
-  --     statementStyle = { bold = false },
-  --     typeStyle = { bold = false },
-  --     transparent = false,
-  --     dimInactive = false,
-  --     colors = {
-  --       theme = {
-  --         all = {
-  --           ui = {
-  --             bg_gutter = 'none',
-  --           },
-  --         },
-  --       },
-  --     },
-  --   })
-  --   vim.cmd('colorscheme kanagawa')
-  -- end,
+  'rebelot/kanagawa.nvim',
+  priority = 1000,
+  config = function()
+    require('kanagawa').setup({
+      undercurl = false,
+      commentStyle = { italic = false },
+      keywordStyle = { italic = false },
+      statementStyle = { bold = false },
+      typeStyle = { bold = false },
+      transparent = false,
+      dimInactive = false,
+      colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = 'none',
+            },
+          },
+        },
+      },
+    })
+    vim.cmd('colorscheme kanagawa')
+  end,
 
   ---------------------------------------------------------
 
@@ -100,7 +100,7 @@ return {
   --   vim.g.everforest_diagnostic_virtual_text = "highlighted"
   --   vim.g.everforest_current_word = "grey background"
   --   vim.g.everforest_float_style = "dim"
-  --   vim.g.everforest_dim_inactive_windows = 1
+  --   -- vim.g.everforest_dim_inactive_windows = 1
   --   vim.g.everforest_background = "hard"
   --   -- vim.g.everforest_transparent_background = 2
   --   vim.cmd.colorscheme("everforest")
@@ -115,7 +115,7 @@ return {
   --   vim.g.gruvbox_material_diagnostic_virtual_text = "highlighted"
   --   vim.g.gruvbox_material_current_word = "grey background"
   --   vim.g.gruvbox_material_float_style = "dim"
-  --   vim.g.gruvbox_material_dim_inactive_windows = 1
+  --   -- vim.g.gruvbox_material_dim_inactive_windows = 1
   --   -- vim.g.gruvbox_material_disable_italic_comment = 1
   --   -- vim.g.gruvbox_material_background = 'hard'
   --   -- vim.g.gruvbox_material_transparent_background = 2

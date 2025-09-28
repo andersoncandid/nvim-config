@@ -56,6 +56,7 @@ require('lazy').setup({
   { import = 'plugins.coding.autotag' },
   { import = 'plugins.coding.treesitter-context' },
   { import = 'plugins.coding.trouble' },
+  -- { import = 'plugins.coding.emmet' },
   --
 }, {
   ui = {
