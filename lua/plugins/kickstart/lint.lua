@@ -7,10 +7,10 @@ return {
       local lint = require('lint')
       lint.linters_by_ft = {
         -- Core FULLSTACK
-        javascript = { 'eslint_d' },
-        typescript = { 'eslint_d' },
-        javascriptreact = { 'eslint_d' },
-        typescriptreact = { 'eslint_d' },
+        -- javascript = { 'eslint_d' },
+        -- typescript = { 'eslint_d' },
+        -- javascriptreact = { 'eslint_d' },
+        -- typescriptreact = { 'eslint_d' },
 
         -- Web (HTML/CSS)
         html = { 'htmlhint' },
