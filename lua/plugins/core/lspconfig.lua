@@ -167,6 +167,23 @@ return {
       --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+
+      --  Disable formatting capabilities
+      local lsp_formatting_disabled = {
+        ts_ls = true,
+        html = true,
+        cssls = true,
+        jsonls = true,
+        lua_ls = true,
+      }
+      -- On_attach base function that disables formatting when necessary
+      local function base_on_attach(client, bufnr)
+        if lsp_formatting_disabled[client.name] then
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
+        end
+      end
+
       local servers = {
         clangd = {}, -- C e C++
         -- gopls = {},
@@ -185,7 +202,6 @@ return {
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {}, -- javascript
-        --
 
         lua_ls = {
           -- cmd = { ... },
@@ -208,12 +224,14 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua',
-        'prettier',
-        'prettierd',
+        -- 'biome',
         'black',
         'isort',
+        'prettierd', -- formatter
+        'prettier', -- formatter
+
         -- Linters [Uncomment if Linter is enable]
-        'eslint_d', -- js,ts
+        -- 'eslint_d',
         'ruff', -- python
         'htmlhint', -- html
         'stylelint', -- css, scss
@@ -235,7 +253,21 @@ return {
             -- This handles overriding only values explicitly passed
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
+
+            -- Merge capabilities
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+
+            -- Preserve any on_attach already defined on the server and run `base_on_attach` first
+            local orig_on_attach = server.on_attach
+            server.on_attach = function(client, bufnr)
+              -- applies logic to disable formatting when necessary
+              base_on_attach(client, bufnr)
+              -- if the server had a specific on_attach, it runs too
+              if orig_on_attach then
+                orig_on_attach(client, bufnr)
+              end
+            end
+
             require('lspconfig')[server_name].setup(server)
           end,
         },

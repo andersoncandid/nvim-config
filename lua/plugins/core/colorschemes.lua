@@ -1,51 +1,51 @@
 return {
 
-  -- 'folke/tokyonight.nvim',
-  -- priority = 1000, -- Make sure to load this before all the other start plugins.
-  -- config = function()
-  --   ---@diagnostic disable-next-line: missing-fields
-  --   require('tokyonight').setup({
-  --     -- transparent = true,
-  --     dim_inactive = true,
-  --     styles = {
-  --       keywords = { italic = false },
-  --       comments = { italic = false },
-  --     },
-  --   })
-  --
-  --   -- Load the colorscheme here.
-  --   -- Like many other themes, this one has different styles, and you could load
-  --   -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  --   vim.cmd.colorscheme('tokyonight-night')
-  -- end,
+  'folke/tokyonight.nvim',
+  priority = 1000, -- Make sure to load this before all the other start plugins.
+  config = function()
+    ---@diagnostic disable-next-line: missing-fields
+    require('tokyonight').setup({
+      -- transparent = true,
+      dim_inactive = true,
+      styles = {
+        keywords = { italic = false },
+        comments = { italic = false },
+      },
+    })
+
+    -- Load the colorscheme here.
+    -- Like many other themes, this one has different styles, and you could load
+    -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
+    vim.cmd.colorscheme('tokyonight-night')
+  end,
 
   ---------------------------------------------------------
 
-  'catppuccin/nvim',
-  name = 'catppuccin',
-  priority = 1000,
-  config = function()
-    require('catppuccin').setup({
-      transparent_background = false,
-      float = {
-        transparent = false, -- enable transparent floating windows
-        solid = false, -- use solid styling for floating windows, see |winborder|
-      },
-      -- dim_inactive = {
-      --   enabled = true, -- dims the background color of inactive window
-      --   shade = 'dark',
-      --   percentage = 0.15, -- percentage of the shade to apply to the inactive window
-      -- },
-      styles = {
-        conditionals = {},
-        comments = {},
-      },
-      integrations = {
-        which_key = true,
-      },
-    })
-    vim.cmd.colorscheme('catppuccin-mocha')
-  end,
+  -- 'catppuccin/nvim',
+  -- name = 'catppuccin',
+  -- priority = 1000,
+  -- config = function()
+  --   require('catppuccin').setup({
+  --     transparent_background = false,
+  --     float = {
+  --       transparent = false, -- enable transparent floating windows
+  --       solid = false, -- use solid styling for floating windows, see |winborder|
+  --     },
+  --     -- dim_inactive = {
+  --     --   enabled = true, -- dims the background color of inactive window
+  --     --   shade = 'dark',
+  --     --   percentage = 0.15, -- percentage of the shade to apply to the inactive window
+  --     -- },
+  --     styles = {
+  --       conditionals = {},
+  --       comments = {},
+  --     },
+  --     integrations = {
+  --       which_key = true,
+  --     },
+  --   })
+  --   vim.cmd.colorscheme('catppuccin-mocha')
+  -- end,
 
   ----------------------------------------------------------
 
@@ -62,7 +62,7 @@ return {
   --     },
   --   })
   --
-  --   vim.cmd('colorscheme carbonfox')
+  --   vim.cmd('colorscheme nightfox')
   -- end,
 
   ---------------------------------------------------------
