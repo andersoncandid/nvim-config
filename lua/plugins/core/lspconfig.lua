@@ -191,7 +191,7 @@ return {
         html = {}, -- HTML
         cssls = {}, -- CSS
         emmet_language_server = {}, -- https://emmet.io/
-        tailwindcss = {},
+        -- tailwindcss = {},
         jsonls = {}, -- JSON
         bashls = {}, -- bash script
         -- rust_analyzer = {},
