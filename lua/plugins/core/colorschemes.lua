@@ -93,32 +93,47 @@ return {
 
   ---------------------------------------------------------
 
-  "sainnhe/everforest",
-  lazy = false,
+  'navarasu/onedark.nvim',
   priority = 1000,
   config = function()
-    vim.g.everforest_diagnostic_virtual_text = "highlighted"
-    vim.g.everforest_current_word = "grey background"
-    vim.g.everforest_float_style = "dim"
-    -- vim.g.everforest_dim_inactive_windows = 1
-    vim.g.everforest_background = "hard"
-    vim.g.everforest_transparent_background = 2
-    vim.cmd.colorscheme("everforest")
+    require('onedark').setup({
+      style = 'darker',
+      code_style = {
+        comments = 'none',
+      },
+    })
+    require('onedark').load()
   end,
 
   ---------------------------------------------------------
 
-  -- "sainnhe/gruvbox-material",
+  -- 'sainnhe/everforest',
   -- lazy = false,
   -- priority = 1000,
   -- config = function()
-  --   vim.g.gruvbox_material_diagnostic_virtual_text = "highlighted"
-  --   vim.g.gruvbox_material_current_word = "grey background"
-  --   vim.g.gruvbox_material_float_style = "blend"
+  --   vim.g.everforest_diagnostic_virtual_text = 'highlighted'
+  --   vim.g.everforest_show_eob = 0
+  --   vim.g.everforest_current_word = 'grey background'
+  --   vim.g.everforest_float_style = 'dim'
+  --   -- vim.g.everforest_dim_inactive_windows = 1
+  --   vim.g.everforest_background = 'hard'
+  --   vim.g.everforest_transparent_background = 2
+  --   vim.cmd.colorscheme('everforest')
+  -- end,
+
+  ---------------------------------------------------------
+
+  -- 'sainnhe/gruvbox-material',
+  -- lazy = false,
+  -- priority = 1000,
+  -- config = function()
+  --   vim.g.gruvbox_material_diagnostic_virtual_text = 'highlighted'
+  --   vim.g.gruvbox_material_current_word = 'grey background'
+  --   vim.g.gruvbox_material_float_style = 'blend'
   --   -- vim.g.gruvbox_material_dim_inactive_windows = 1
   --   vim.g.gruvbox_material_disable_italic_comment = 1
-  --   -- vim.g.gruvbox_material_background = 'hard'
-  --   vim.g.gruvbox_material_transparent_background = 2
-  --   vim.cmd.colorscheme("gruvbox-material")
+  --   vim.g.gruvbox_material_background = 'hard'
+  --   -- vim.g.gruvbox_material_transparent_background = 2
+  --   vim.cmd.colorscheme('gruvbox-material')
   -- end,
 }

@@ -57,6 +57,7 @@ require('lazy').setup({
   { import = 'plugins.coding.treesitter-context' },
   { import = 'plugins.coding.trouble' },
   -- { import = 'plugins.coding.emmet' },
+  { import = 'plugins.be-good' },
   --
 }, {
   ui = {
