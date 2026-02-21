@@ -27,13 +27,13 @@ return {
       })
 
       -- Simple and easy statusline.
-      local statusline = require('mini.statusline')
-      statusline.setup({ vim.g.have_nerd_font })
-
-      ---@diagnostic disable-next-line: duplicate-set-field
-      statusline.section_location = function()
-        return '%2l:%-2v'
-      end
+      -- local statusline = require('mini.statusline')
+      -- statusline.setup({ vim.g.have_nerd_font })
+      --
+      -- ---@diagnostic disable-next-line: duplicate-set-field
+      -- statusline.section_location = function()
+      --   return '%2l:%-2v'
+      -- end
 
       require('mini.tabline').setup() -- Buffers tab bar on top
 

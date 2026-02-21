@@ -34,6 +34,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 --[[ Esc Alternative]]
 vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true })
+vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
 
 --[[ Buffer Keymaps ]]
 

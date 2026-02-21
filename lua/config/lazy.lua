@@ -51,7 +51,7 @@ require('lazy').setup({
   { import = 'plugins.kickstart.gitsigns' }, -- adds gitsigns recommend keymaps
 
   -- [[ Other Plugins ]]
-  -- { import = 'plugins.ui.lualine' },
+  { import = 'plugins.ui.lualine' },
   -- { import = 'plugins.ui.barbar' },
   { import = 'plugins.coding.autotag' },
   { import = 'plugins.coding.treesitter-context' },

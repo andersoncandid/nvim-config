@@ -1,10 +1,11 @@
 vim.opt.expandtab = true -- converts tabs to spaces
-vim.opt.tabstop = 2 -- visual tab width
-vim.opt.shiftwidth = 2 -- width when indenting
-vim.opt.softtabstop = 2 -- width when pressing <Tab> or <BS>
+vim.opt.tabstop = 4 -- visual tab width
+vim.opt.shiftwidth = 4 -- width when indenting
+vim.opt.softtabstop = 4 -- width when pressing <Tab> or <BS>
 
 -- Enable line number
 vim.o.number = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
