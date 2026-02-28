@@ -5,7 +5,7 @@ return {
   -- config = function()
   --   ---@diagnostic disable-next-line: missing-fields
   --   require('tokyonight').setup({
-  --     -- transparent = true,
+  --     transparent = true,
   --     dim_inactive = false,
   --     styles = {
   --       keywords = { italic = false },
@@ -72,8 +72,9 @@ return {
   config = function()
     require('onedark').setup({
       transparent = true,
-      -- style = 'darker',
-      style = 'deep',
+      style = 'darker',
+      -- style = 'deep',
+      -- style = 'cool',
       -- style = 'warmer',
       code_style = {
         comments = 'none',

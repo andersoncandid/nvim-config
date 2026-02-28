@@ -35,7 +35,7 @@ require('lazy').setup({
   { import = 'plugins.core.telescope' },
   { import = 'plugins.core.lazydev' },
   { import = 'plugins.core.lspconfig' },
-  { import = 'plugins.core.conform' },
+  -- { import = 'plugins.core.conform' },
   { import = 'plugins.core.blink' },
   { import = 'plugins.core.colorschemes' },
   { import = 'plugins.core.todo-comments' },
